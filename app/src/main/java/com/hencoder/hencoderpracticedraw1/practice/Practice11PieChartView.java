@@ -67,12 +67,6 @@ public class Practice11PieChartView extends View {
         int width=getWidth()/2;
         int height=getHeight()/2;
         int startAngle=-180;
-        float lineStartX;
-        float lineStartY;
-        float lineEndX;
-        float lineEndY;
-        float lineAngle;
-        int radius=360;
 
         for (int i = 0; i < mDataList.size(); i++) {
             Data data = mDataList.get(i);
@@ -83,9 +77,7 @@ public class Practice11PieChartView extends View {
             }else{
                 canvas.drawArc(width-200,height-200,width+200,height+200,startAngle,data.getAngle(),true,mPaint);
             }
-
             startAngle+=data.getAngle()+mPadding;
-
         }
 
     }
